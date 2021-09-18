@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct UICatBreed {
+struct UICatBreed:Codable {
     let name:String
     let image:String
+    let description:String
 }
 
 class CatBreedUIConverter {
@@ -26,8 +27,9 @@ class CatBreedUIConverter {
     func convertCatBreed(_ catBreed: CatBreed)-> UICatBreed {
         let name = catBreed.name ?? ""
         let imageUrl = catBreed.image?.url ?? ""
+        let description = catBreed.description ?? ""
         
-        return UICatBreed(name: name, image: imageUrl)
+        return UICatBreed(name: name, image: imageUrl, description: description)
         
     }
 }

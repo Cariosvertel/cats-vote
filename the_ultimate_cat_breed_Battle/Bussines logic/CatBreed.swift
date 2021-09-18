@@ -11,6 +11,7 @@ import Foundation
 struct CatBreed : Decodable {
     let name: String?
     let image: Image?
+    let description: String?
 }
 
 struct Image : Decodable {

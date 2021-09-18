@@ -13,6 +13,7 @@ class BreedListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         breedListTableView.dataSource = self
+        breedListTableView.delegate = self
         breedListTableView.register(BreedListTableViewCell.nib, forCellReuseIdentifier: BreedListTableViewCell.identifier)
         // Do any additional setup after loading the view.
     }
@@ -31,9 +32,16 @@ extension BreedListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BreedListTableViewCell.identifier, for: indexPath) as! BreedListTableViewCell
-        cell.catBreedName.text = catBreeds[indexPath.row].name
+        cell.setUICatBreed(catBreeds[indexPath.row])
         return cell
     }
-    
-    
+}
+
+extension BreedListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let toBreedDescriptionVC = storyboard?.instantiateViewController(identifier: "BreedDescriptionVC") as! BreedDescriptionViewController
+        toBreedDescriptionVC.catBreed = catBreeds[indexPath.row]
+        navigationController?.pushViewController(toBreedDescriptionVC, animated: true)
+    }
 }

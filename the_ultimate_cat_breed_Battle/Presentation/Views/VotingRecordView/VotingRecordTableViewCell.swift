@@ -7,14 +7,21 @@
 
 import UIKit
 
-class BreedInfoTableViewCell: UITableViewCell {
+class VotingRecordTableViewCell: UITableViewCell {
     
-    static let nib: UINib = UINib(nibName: "BreedInfoTableViewCell", bundle: nil)
-    static let identifier = "BreedInfoVC"
+    static let nib = UINib(nibName: "VotingRecordTableViewCell", bundle: nil)
+    static let identifier = "VotingRecordVC"
     
+    @IBOutlet weak var breedName: UILabel!
+    @IBOutlet weak var voteDate: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    //date format:MMM d, h:mm a
+    func setUIVotingRecord(_ catBreed: UICatBreed){
+        breedName.text = catBreed.name
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

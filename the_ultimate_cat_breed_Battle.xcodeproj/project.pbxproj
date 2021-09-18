@@ -14,11 +14,13 @@
 		50575DA326F5999C002258CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50575DA226F5999C002258CE /* Assets.xcassets */; };
 		50575DA626F5999C002258CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50575DA426F5999C002258CE /* LaunchScreen.storyboard */; };
 		50575DB526F5ADE8002258CE /* BreedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50575DB426F5ADE8002258CE /* BreedListViewController.swift */; };
-		5093278326F613DB00D8AF27 /* BreedInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093278226F613DB00D8AF27 /* BreedInfoViewController.swift */; };
+		5076A72A26F6F42C00C3FCA4 /* BreedDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5076A72826F6F42C00C3FCA4 /* BreedDescriptionViewController.swift */; };
+		5076A72B26F6F42C00C3FCA4 /* BreedDescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5076A72926F6F42C00C3FCA4 /* BreedDescriptionViewController.xib */; };
+		5093278326F613DB00D8AF27 /* VotingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093278226F613DB00D8AF27 /* VotingRecordViewController.swift */; };
 		5093278726F61A2600D8AF27 /* BreedListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093278526F61A2600D8AF27 /* BreedListTableViewCell.swift */; };
 		5093278826F61A2600D8AF27 /* BreedListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5093278626F61A2600D8AF27 /* BreedListTableViewCell.xib */; };
-		5093278C26F6219600D8AF27 /* BreedInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093278A26F6219600D8AF27 /* BreedInfoTableViewCell.swift */; };
-		5093278D26F6219600D8AF27 /* BreedInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5093278B26F6219600D8AF27 /* BreedInfoTableViewCell.xib */; };
+		5093278C26F6219600D8AF27 /* VotingRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093278A26F6219600D8AF27 /* VotingRecordTableViewCell.swift */; };
+		5093278D26F6219600D8AF27 /* VotingRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5093278B26F6219600D8AF27 /* VotingRecordTableViewCell.xib */; };
 		5093279126F624F100D8AF27 /* CatBreedDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093279026F624F100D8AF27 /* CatBreedDataService.swift */; };
 		5093279426F62AB100D8AF27 /* CatBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093279326F62AB100D8AF27 /* CatBreed.swift */; };
 		5093279726F6338B00D8AF27 /* CatBreedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093279626F6338B00D8AF27 /* CatBreedPresenter.swift */; };
@@ -35,11 +37,13 @@
 		50575DA526F5999C002258CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50575DA726F5999C002258CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50575DB426F5ADE8002258CE /* BreedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewController.swift; sourceTree = "<group>"; };
-		5093278226F613DB00D8AF27 /* BreedInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedInfoViewController.swift; sourceTree = "<group>"; };
+		5076A72826F6F42C00C3FCA4 /* BreedDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDescriptionViewController.swift; sourceTree = "<group>"; };
+		5076A72926F6F42C00C3FCA4 /* BreedDescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedDescriptionViewController.xib; sourceTree = "<group>"; };
+		5093278226F613DB00D8AF27 /* VotingRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingRecordViewController.swift; sourceTree = "<group>"; };
 		5093278526F61A2600D8AF27 /* BreedListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListTableViewCell.swift; sourceTree = "<group>"; };
 		5093278626F61A2600D8AF27 /* BreedListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedListTableViewCell.xib; sourceTree = "<group>"; };
-		5093278A26F6219600D8AF27 /* BreedInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedInfoTableViewCell.swift; sourceTree = "<group>"; };
-		5093278B26F6219600D8AF27 /* BreedInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedInfoTableViewCell.xib; sourceTree = "<group>"; };
+		5093278A26F6219600D8AF27 /* VotingRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingRecordTableViewCell.swift; sourceTree = "<group>"; };
+		5093278B26F6219600D8AF27 /* VotingRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VotingRecordTableViewCell.xib; sourceTree = "<group>"; };
 		5093279026F624F100D8AF27 /* CatBreedDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedDataService.swift; sourceTree = "<group>"; };
 		5093279326F62AB100D8AF27 /* CatBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreed.swift; sourceTree = "<group>"; };
 		5093279626F6338B00D8AF27 /* CatBreedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedPresenter.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 		50575DAE26F59A8A002258CE /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5076A72326F6DA8800C3FCA4 /* BreedVoterViewController */,
 				50575DB326F5AD92002258CE /* Views */,
 				5093279626F6338B00D8AF27 /* CatBreedPresenter.swift */,
 				5093279926F63AC600D8AF27 /* CatBreedUIConverter.swift */,
@@ -119,14 +124,39 @@
 		50575DB326F5AD92002258CE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				50575DB426F5ADE8002258CE /* BreedListViewController.swift */,
-				5093278226F613DB00D8AF27 /* BreedInfoViewController.swift */,
-				5093278526F61A2600D8AF27 /* BreedListTableViewCell.swift */,
-				5093278626F61A2600D8AF27 /* BreedListTableViewCell.xib */,
-				5093278A26F6219600D8AF27 /* BreedInfoTableViewCell.swift */,
-				5093278B26F6219600D8AF27 /* BreedInfoTableViewCell.xib */,
+				5076A72626F6F3D000C3FCA4 /* VotingRecordView */,
+				5089DA9926F699E2002E16A9 /* BreedListView */,
+				5076A72826F6F42C00C3FCA4 /* BreedDescriptionViewController.swift */,
+				5076A72926F6F42C00C3FCA4 /* BreedDescriptionViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5076A72326F6DA8800C3FCA4 /* BreedVoterViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BreedVoterViewController;
+			sourceTree = "<group>";
+		};
+		5076A72626F6F3D000C3FCA4 /* VotingRecordView */ = {
+			isa = PBXGroup;
+			children = (
+				5093278A26F6219600D8AF27 /* VotingRecordTableViewCell.swift */,
+				5093278B26F6219600D8AF27 /* VotingRecordTableViewCell.xib */,
+				5093278226F613DB00D8AF27 /* VotingRecordViewController.swift */,
+			);
+			path = VotingRecordView;
+			sourceTree = "<group>";
+		};
+		5089DA9926F699E2002E16A9 /* BreedListView */ = {
+			isa = PBXGroup;
+			children = (
+				5093278626F61A2600D8AF27 /* BreedListTableViewCell.xib */,
+				5093278526F61A2600D8AF27 /* BreedListTableViewCell.swift */,
+				50575DB426F5ADE8002258CE /* BreedListViewController.swift */,
+			);
+			path = BreedListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +220,8 @@
 				50575DA626F5999C002258CE /* LaunchScreen.storyboard in Resources */,
 				50575DA326F5999C002258CE /* Assets.xcassets in Resources */,
 				50575DA126F5999B002258CE /* Main.storyboard in Resources */,
-				5093278D26F6219600D8AF27 /* BreedInfoTableViewCell.xib in Resources */,
+				5076A72B26F6F42C00C3FCA4 /* BreedDescriptionViewController.xib in Resources */,
+				5093278D26F6219600D8AF27 /* VotingRecordTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,15 +232,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5076A72A26F6F42C00C3FCA4 /* BreedDescriptionViewController.swift in Sources */,
 				5093278726F61A2600D8AF27 /* BreedListTableViewCell.swift in Sources */,
 				5093279126F624F100D8AF27 /* CatBreedDataService.swift in Sources */,
 				5093279A26F63AC600D8AF27 /* CatBreedUIConverter.swift in Sources */,
 				50575DB526F5ADE8002258CE /* BreedListViewController.swift in Sources */,
 				50575D9E26F5999B002258CE /* CatBreedViewController.swift in Sources */,
 				50575D9A26F5999B002258CE /* AppDelegate.swift in Sources */,
-				5093278C26F6219600D8AF27 /* BreedInfoTableViewCell.swift in Sources */,
+				5093278C26F6219600D8AF27 /* VotingRecordTableViewCell.swift in Sources */,
 				5093279426F62AB100D8AF27 /* CatBreed.swift in Sources */,
-				5093278326F613DB00D8AF27 /* BreedInfoViewController.swift in Sources */,
+				5093278326F613DB00D8AF27 /* VotingRecordViewController.swift in Sources */,
 				5093279726F6338B00D8AF27 /* CatBreedPresenter.swift in Sources */,
 				50575D9C26F5999B002258CE /* SceneDelegate.swift in Sources */,
 			);

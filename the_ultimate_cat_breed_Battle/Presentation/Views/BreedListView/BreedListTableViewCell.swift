@@ -15,10 +15,13 @@ class BreedListTableViewCell: UITableViewCell {
     @IBOutlet weak var catBreedName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
     
-
+    func setUICatBreed(_ catBreed: UICatBreed){
+        catBreedName.text = catBreed.name
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
