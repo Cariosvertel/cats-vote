@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VoteViewController: UIViewController {
+class CatBreedViewController: UIViewController {
     @IBOutlet weak var catBreedImage: UIImageView!
     @IBOutlet weak var catBreedName: UILabel!
     
@@ -19,6 +19,10 @@ class VoteViewController: UIViewController {
     @IBAction func didTapLikeCatBreed(_ sender: UIButton) {
     }
     @IBAction func didTapDislikeCatBreed(_ sender: UIButton) {
+    }
+    @IBAction func didTapBreedsList(_ sender: UIButton) {
+        guard let toBreedListVC = storyboard?.instantiateViewController(identifier: "BreedListVC") else {return}
+        navigationController?.pushViewController(toBreedListVC, animated: true)
     }
     
     

@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		50575D9A26F5999B002258CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50575D9926F5999B002258CE /* AppDelegate.swift */; };
 		50575D9C26F5999B002258CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50575D9B26F5999B002258CE /* SceneDelegate.swift */; };
-		50575D9E26F5999B002258CE /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50575D9D26F5999B002258CE /* VoteViewController.swift */; };
+		50575D9E26F5999B002258CE /* CatBreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50575D9D26F5999B002258CE /* CatBreedViewController.swift */; };
 		50575DA126F5999B002258CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50575D9F26F5999B002258CE /* Main.storyboard */; };
 		50575DA326F5999C002258CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50575DA226F5999C002258CE /* Assets.xcassets */; };
 		50575DA626F5999C002258CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50575DA426F5999C002258CE /* LaunchScreen.storyboard */; };
+		50575DB526F5ADE8002258CE /* BreedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50575DB426F5ADE8002258CE /* BreedListViewController.swift */; };
+		5093278326F613DB00D8AF27 /* BreedInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093278226F613DB00D8AF27 /* BreedInfoViewController.swift */; };
+		5093278726F61A2600D8AF27 /* BreedListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093278526F61A2600D8AF27 /* BreedListTableViewCell.swift */; };
+		5093278826F61A2600D8AF27 /* BreedListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5093278626F61A2600D8AF27 /* BreedListTableViewCell.xib */; };
+		5093278C26F6219600D8AF27 /* BreedInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093278A26F6219600D8AF27 /* BreedInfoTableViewCell.swift */; };
+		5093278D26F6219600D8AF27 /* BreedInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5093278B26F6219600D8AF27 /* BreedInfoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		50575D9626F5999B002258CE /* the_ultimate_cat_breed_Battle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = the_ultimate_cat_breed_Battle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50575D9926F5999B002258CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50575D9B26F5999B002258CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		50575D9D26F5999B002258CE /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
+		50575D9D26F5999B002258CE /* CatBreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedViewController.swift; sourceTree = "<group>"; };
 		50575DA026F5999B002258CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50575DA226F5999C002258CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50575DA526F5999C002258CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50575DA726F5999C002258CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50575DB426F5ADE8002258CE /* BreedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewController.swift; sourceTree = "<group>"; };
+		5093278226F613DB00D8AF27 /* BreedInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedInfoViewController.swift; sourceTree = "<group>"; };
+		5093278526F61A2600D8AF27 /* BreedListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListTableViewCell.swift; sourceTree = "<group>"; };
+		5093278626F61A2600D8AF27 /* BreedListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedListTableViewCell.xib; sourceTree = "<group>"; };
+		5093278A26F6219600D8AF27 /* BreedInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedInfoTableViewCell.swift; sourceTree = "<group>"; };
+		5093278B26F6219600D8AF27 /* BreedInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedInfoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +73,7 @@
 				50575DAE26F59A8A002258CE /* Presentation */,
 				50575D9926F5999B002258CE /* AppDelegate.swift */,
 				50575D9B26F5999B002258CE /* SceneDelegate.swift */,
-				50575D9D26F5999B002258CE /* VoteViewController.swift */,
+				50575D9D26F5999B002258CE /* CatBreedViewController.swift */,
 				50575D9F26F5999B002258CE /* Main.storyboard */,
 				50575DA226F5999C002258CE /* Assets.xcassets */,
 				50575DA426F5999C002258CE /* LaunchScreen.storyboard */,
@@ -73,6 +85,7 @@
 		50575DAE26F59A8A002258CE /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				50575DB326F5AD92002258CE /* Views */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -89,6 +102,19 @@
 			children = (
 			);
 			path = "Bussines logic";
+			sourceTree = "<group>";
+		};
+		50575DB326F5AD92002258CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				50575DB426F5ADE8002258CE /* BreedListViewController.swift */,
+				5093278226F613DB00D8AF27 /* BreedInfoViewController.swift */,
+				5093278526F61A2600D8AF27 /* BreedListTableViewCell.swift */,
+				5093278626F61A2600D8AF27 /* BreedListTableViewCell.xib */,
+				5093278A26F6219600D8AF27 /* BreedInfoTableViewCell.swift */,
+				5093278B26F6219600D8AF27 /* BreedInfoTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +174,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5093278826F61A2600D8AF27 /* BreedListTableViewCell.xib in Resources */,
 				50575DA626F5999C002258CE /* LaunchScreen.storyboard in Resources */,
 				50575DA326F5999C002258CE /* Assets.xcassets in Resources */,
 				50575DA126F5999B002258CE /* Main.storyboard in Resources */,
+				5093278D26F6219600D8AF27 /* BreedInfoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,8 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50575D9E26F5999B002258CE /* VoteViewController.swift in Sources */,
+				5093278726F61A2600D8AF27 /* BreedListTableViewCell.swift in Sources */,
+				50575DB526F5ADE8002258CE /* BreedListViewController.swift in Sources */,
+				50575D9E26F5999B002258CE /* CatBreedViewController.swift in Sources */,
 				50575D9A26F5999B002258CE /* AppDelegate.swift in Sources */,
+				5093278C26F6219600D8AF27 /* BreedInfoTableViewCell.swift in Sources */,
+				5093278326F613DB00D8AF27 /* BreedInfoViewController.swift in Sources */,
 				50575D9C26F5999B002258CE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
