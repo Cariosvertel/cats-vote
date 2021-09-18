@@ -11,7 +11,7 @@ class CatBreedDataService {
     static let instance:CatBreedDataService = CatBreedDataService()
     let apiKey = "7c5d7bd1-5615-43b8-bcd6-2694fe1280b0"
     
-    func getCatBreeds(){
+    func getBreeds(onCompletion: @escaping CallbackBlock<CatBreed>, onError: ErrorBlock?){
         
         guard let url:URL = URL(string: "https://api.thecatapi.com/v1/breeds") else {return}
         
@@ -27,10 +27,11 @@ class CatBreedDataService {
                 let decodeData : [CatBreed] = try JSONDecoder().decode([CatBreed].self, from: data)
                 
                 DispatchQueue.main.async {
-                    print(decodeData[1].name)
+                    
+                    onCompletion(decodeData)
                 }
             }catch{
-                
+                onError?(error)
             }
         }
         task.resume()

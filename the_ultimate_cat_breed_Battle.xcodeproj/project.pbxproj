@@ -21,6 +21,8 @@
 		5093278D26F6219600D8AF27 /* BreedInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5093278B26F6219600D8AF27 /* BreedInfoTableViewCell.xib */; };
 		5093279126F624F100D8AF27 /* CatBreedDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093279026F624F100D8AF27 /* CatBreedDataService.swift */; };
 		5093279426F62AB100D8AF27 /* CatBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093279326F62AB100D8AF27 /* CatBreed.swift */; };
+		5093279726F6338B00D8AF27 /* CatBreedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093279626F6338B00D8AF27 /* CatBreedPresenter.swift */; };
+		5093279A26F63AC600D8AF27 /* CatBreedUIConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093279926F63AC600D8AF27 /* CatBreedUIConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		5093278B26F6219600D8AF27 /* BreedInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedInfoTableViewCell.xib; sourceTree = "<group>"; };
 		5093279026F624F100D8AF27 /* CatBreedDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedDataService.swift; sourceTree = "<group>"; };
 		5093279326F62AB100D8AF27 /* CatBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreed.swift; sourceTree = "<group>"; };
+		5093279626F6338B00D8AF27 /* CatBreedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedPresenter.swift; sourceTree = "<group>"; };
+		5093279926F63AC600D8AF27 /* CatBreedUIConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedUIConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				50575DB326F5AD92002258CE /* Views */,
+				5093279626F6338B00D8AF27 /* CatBreedPresenter.swift */,
+				5093279926F63AC600D8AF27 /* CatBreedUIConverter.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -197,12 +203,14 @@
 			files = (
 				5093278726F61A2600D8AF27 /* BreedListTableViewCell.swift in Sources */,
 				5093279126F624F100D8AF27 /* CatBreedDataService.swift in Sources */,
+				5093279A26F63AC600D8AF27 /* CatBreedUIConverter.swift in Sources */,
 				50575DB526F5ADE8002258CE /* BreedListViewController.swift in Sources */,
 				50575D9E26F5999B002258CE /* CatBreedViewController.swift in Sources */,
 				50575D9A26F5999B002258CE /* AppDelegate.swift in Sources */,
 				5093278C26F6219600D8AF27 /* BreedInfoTableViewCell.swift in Sources */,
 				5093279426F62AB100D8AF27 /* CatBreed.swift in Sources */,
 				5093278326F613DB00D8AF27 /* BreedInfoViewController.swift in Sources */,
+				5093279726F6338B00D8AF27 /* CatBreedPresenter.swift in Sources */,
 				50575D9C26F5999B002258CE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

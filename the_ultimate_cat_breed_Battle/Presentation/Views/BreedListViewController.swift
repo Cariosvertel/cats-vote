@@ -8,7 +8,7 @@
 import UIKit
 
 class BreedListViewController: UIViewController {
-
+    var catBreeds: [UICatBreed] = []
     @IBOutlet weak var breedListTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +26,12 @@ class BreedListViewController: UIViewController {
 
 extension BreedListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return catBreeds.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: BreedListTableViewCell.identifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: BreedListTableViewCell.identifier, for: indexPath) as! BreedListTableViewCell
+        cell.catBreedName.text = catBreeds[indexPath.row].name
         return cell
     }
     
