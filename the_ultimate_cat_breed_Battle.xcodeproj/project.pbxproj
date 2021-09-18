@@ -19,6 +19,8 @@
 		5093278826F61A2600D8AF27 /* BreedListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5093278626F61A2600D8AF27 /* BreedListTableViewCell.xib */; };
 		5093278C26F6219600D8AF27 /* BreedInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093278A26F6219600D8AF27 /* BreedInfoTableViewCell.swift */; };
 		5093278D26F6219600D8AF27 /* BreedInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5093278B26F6219600D8AF27 /* BreedInfoTableViewCell.xib */; };
+		5093279126F624F100D8AF27 /* CatBreedDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093279026F624F100D8AF27 /* CatBreedDataService.swift */; };
+		5093279426F62AB100D8AF27 /* CatBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5093279326F62AB100D8AF27 /* CatBreed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		5093278626F61A2600D8AF27 /* BreedListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedListTableViewCell.xib; sourceTree = "<group>"; };
 		5093278A26F6219600D8AF27 /* BreedInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedInfoTableViewCell.swift; sourceTree = "<group>"; };
 		5093278B26F6219600D8AF27 /* BreedInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedInfoTableViewCell.xib; sourceTree = "<group>"; };
+		5093279026F624F100D8AF27 /* CatBreedDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedDataService.swift; sourceTree = "<group>"; };
+		5093279326F62AB100D8AF27 /* CatBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		50575DAF26F59AAC002258CE /* DataService */ = {
 			isa = PBXGroup;
 			children = (
+				5093279026F624F100D8AF27 /* CatBreedDataService.swift */,
 			);
 			path = DataService;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 		50575DB026F59AC0002258CE /* Bussines logic */ = {
 			isa = PBXGroup;
 			children = (
+				5093279326F62AB100D8AF27 /* CatBreed.swift */,
 			);
 			path = "Bussines logic";
 			sourceTree = "<group>";
@@ -190,10 +196,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5093278726F61A2600D8AF27 /* BreedListTableViewCell.swift in Sources */,
+				5093279126F624F100D8AF27 /* CatBreedDataService.swift in Sources */,
 				50575DB526F5ADE8002258CE /* BreedListViewController.swift in Sources */,
 				50575D9E26F5999B002258CE /* CatBreedViewController.swift in Sources */,
 				50575D9A26F5999B002258CE /* AppDelegate.swift in Sources */,
 				5093278C26F6219600D8AF27 /* BreedInfoTableViewCell.swift in Sources */,
+				5093279426F62AB100D8AF27 /* CatBreed.swift in Sources */,
 				5093278326F613DB00D8AF27 /* BreedInfoViewController.swift in Sources */,
 				50575D9C26F5999B002258CE /* SceneDelegate.swift in Sources */,
 			);

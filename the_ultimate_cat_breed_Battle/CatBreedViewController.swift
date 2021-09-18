@@ -10,10 +10,10 @@ import UIKit
 class CatBreedViewController: UIViewController {
     @IBOutlet weak var catBreedImage: UIImageView!
     @IBOutlet weak var catBreedName: UILabel!
-    
+    let dataServiceTest = CatBreedDataService.instance
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        dataServiceTest.getCatBreeds()
     }
     
     @IBAction func didTapLikeCatBreed(_ sender: UIButton) {
