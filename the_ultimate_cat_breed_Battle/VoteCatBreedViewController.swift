@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 //TODO: rename to BreedVoterViewController
 
 
@@ -98,8 +99,13 @@ extension VoteCatBreedViewController{
     func setUIVoteCatBreed(_ catBreed: [UICatBreed]){
         let currentCatBreedIndex = presenter.catBreedProgressStatus.currentIndex
         catBreedName.text = catBreed[currentCatBreedIndex].name
+        catBreedImage.kf.setImage(with: URL(string: catBreeds[presenter.catBreedProgressStatus.currentIndex].image))
+    }
+    func setCatBreedImage(_ imageUrl: String){
+        
     }
 }
+
 enum UserVote: Int {
     case like
     case dislike
