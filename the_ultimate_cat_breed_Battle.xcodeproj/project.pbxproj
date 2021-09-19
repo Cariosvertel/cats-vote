@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		50575D9A26F5999B002258CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50575D9926F5999B002258CE /* AppDelegate.swift */; };
 		50575D9C26F5999B002258CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50575D9B26F5999B002258CE /* SceneDelegate.swift */; };
-		50575D9E26F5999B002258CE /* CatBreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50575D9D26F5999B002258CE /* CatBreedViewController.swift */; };
+		50575D9E26F5999B002258CE /* VoteCatBreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50575D9D26F5999B002258CE /* VoteCatBreedViewController.swift */; };
 		50575DA126F5999B002258CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50575D9F26F5999B002258CE /* Main.storyboard */; };
 		50575DA326F5999C002258CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50575DA226F5999C002258CE /* Assets.xcassets */; };
 		50575DA626F5999C002258CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50575DA426F5999C002258CE /* LaunchScreen.storyboard */; };
@@ -31,7 +31,7 @@
 		50575D9626F5999B002258CE /* the_ultimate_cat_breed_Battle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = the_ultimate_cat_breed_Battle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50575D9926F5999B002258CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50575D9B26F5999B002258CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		50575D9D26F5999B002258CE /* CatBreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedViewController.swift; sourceTree = "<group>"; };
+		50575D9D26F5999B002258CE /* VoteCatBreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCatBreedViewController.swift; sourceTree = "<group>"; };
 		50575DA026F5999B002258CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50575DA226F5999C002258CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50575DA526F5999C002258CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 				50575DAE26F59A8A002258CE /* Presentation */,
 				50575D9926F5999B002258CE /* AppDelegate.swift */,
 				50575D9B26F5999B002258CE /* SceneDelegate.swift */,
-				50575D9D26F5999B002258CE /* CatBreedViewController.swift */,
+				50575D9D26F5999B002258CE /* VoteCatBreedViewController.swift */,
 				50575D9F26F5999B002258CE /* Main.storyboard */,
 				50575DA226F5999C002258CE /* Assets.xcassets */,
 				50575DA426F5999C002258CE /* LaunchScreen.storyboard */,
@@ -237,7 +237,7 @@
 				5093279126F624F100D8AF27 /* CatBreedDataService.swift in Sources */,
 				5093279A26F63AC600D8AF27 /* CatBreedUIConverter.swift in Sources */,
 				50575DB526F5ADE8002258CE /* BreedListViewController.swift in Sources */,
-				50575D9E26F5999B002258CE /* CatBreedViewController.swift in Sources */,
+				50575D9E26F5999B002258CE /* VoteCatBreedViewController.swift in Sources */,
 				50575D9A26F5999B002258CE /* AppDelegate.swift in Sources */,
 				5093278C26F6219600D8AF27 /* VotingRecordTableViewCell.swift in Sources */,
 				5093279426F62AB100D8AF27 /* CatBreed.swift in Sources */,

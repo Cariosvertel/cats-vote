@@ -9,33 +9,32 @@ import UIKit
 //TODO: rename to BreedVoterViewController
 
 
-class CatBreedViewController: UIViewController {
+class VoteCatBreedViewController: UIViewController {
     
     var catBreeds:[UICatBreed] = []
-    var currentBreedIndex = 0
+    
+    let presenter = CatBreedPresenter.instance
     
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var catBreedImage: UIImageView!
     @IBOutlet weak var catBreedName: UILabel!
-    let presenter = CatBreedPresenter.instance
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //TODO: show spinning indicator and put breedProgress in closure below
         loading.startAnimating()
         presenter.getCatBreeds(onCompletion: { uiCatBreed in
             // response
-            self.loading.stopAnimating()
             //TODO: Stop spinning indicator
-            print(uiCatBreed[10].name)
             self.catBreeds = uiCatBreed
-            self.catBreedName.text = uiCatBreed[self.presenter.currentIndex].name
+            self.setUIVoteCatBreed(self.catBreeds)
             
+            self.loading.stopAnimating()
         }, onError: {error in
             //TODO: show any error with UIAlertViewController
-            
+            self.showErrorMessage()
         })
-     
+
         
     }
     
@@ -43,8 +42,17 @@ class CatBreedViewController: UIViewController {
     
     @IBAction func didTapLikeCatBreed(_ sender: UIButton) {
         //TODO: Add like to breed here. Same in local persistency
-//        let userDidPressLike = sender.tag == 1
-
+//        let vote = catBreeds[presenter.catBreedProgressStatus.currentIndex]
+        switch sender.tag {
+        case UserVote.like.rawValue:
+            print(UserVote.like.rawValue)
+            
+        case UserVote.dislike.rawValue:
+            print(UserVote.dislike.rawValue)
+            
+        default:
+            break
+        }
         /*
         let vote = catBreeds[currentBreedIndex]
         vote.isLike = userDidPressLike
@@ -59,27 +67,40 @@ class CatBreedViewController: UIViewController {
     }
     @IBAction func didTapBreedsList(_ sender: UIButton) {
         guard let toBreedListVC = (storyboard?.instantiateViewController(identifier: "BreedListVC")) as? BreedListViewController else {return}
-        toBreedListVC.catBreeds = catBreeds
+        toBreedListVC.catBreeds = presenter.catBreedProgressStatus.breeds // debo usar el presenter?
         navigationController?.pushViewController(toBreedListVC, animated: true)
     }
     @IBAction func didTapVotingRecord(_ sender: UIButton) {
         guard let toVotingRecord = (storyboard?.instantiateViewController(identifier: "VotingRecordVC")) as? VotingRecordViewController else {return}
-        toVotingRecord.catBreeds = catBreeds
+        toVotingRecord.catBreeds = presenter.catBreedProgressStatus.breeds
         navigationController?.present(toVotingRecord, animated: true, completion: nil)
     }
     
     
 }
 
-extension CatBreedViewController{
+extension VoteCatBreedViewController{
     
     func showTheNextBreed(){
-        let isNotTheLastBreed = currentBreedIndex < catBreeds.count - 1
-        
-        if isNotTheLastBreed{
-            currentBreedIndex += 1
-            catBreedName.text = catBreeds[currentBreedIndex].name
+        if presenter.isNotTheLastBreed(){
+            setUIVoteCatBreed(catBreeds)
         }
-        
     }
+    
+    func showErrorMessage(){
+        let alert = UIAlertController(title: "An error has occurred!", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        
+        
+        self.present(alert, animated: true)
+    }
+
+    func setUIVoteCatBreed(_ catBreed: [UICatBreed]){
+        let currentCatBreedIndex = presenter.catBreedProgressStatus.currentIndex
+        catBreedName.text = catBreed[currentCatBreedIndex].name
+    }
+}
+enum UserVote: Int {
+    case like
+    case dislike
 }

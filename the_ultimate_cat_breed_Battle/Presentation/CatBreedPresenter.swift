@@ -20,7 +20,8 @@ class CatBreedPresenter {
     static let instance: CatBreedPresenter = CatBreedPresenter()
     let catBreedDataService = CatBreedDataService.instance
     let converter:CatBreedUIConverter = CatBreedUIConverter.instance
-    let currentIndex = 0
+//    let currentIndex = 0
+    var catBreedProgressStatus = CatBreedProgressStatus()
     
     func getCatBreeds(onCompletion: @escaping CallbackBlock<UICatBreed>, onError: ErrorBlock?){
         /*
@@ -31,9 +32,29 @@ class CatBreedPresenter {
         }
         */
         catBreedDataService.getBreeds(onCompletion: {breeds in
+            
+            self.catBreedProgressStatus.breeds = self.converter.convert(breeds)
             onCompletion(self.converter.convert(breeds))
+            print("on presenter\(self.catBreedProgressStatus.breeds.count)")
+            
         }, onError: onError)
     }
+    
+    func isNotTheLastBreed() -> Bool{
+        let currentIndex = catBreedProgressStatus.currentIndex
+        let catBreedCount = catBreedProgressStatus.breeds.count
+        let isNotTheLastBreed = currentIndex < catBreedCount - 1
+        
+        if isNotTheLastBreed {
+            catBreedProgressStatus.currentIndex += 1
+            return true
+        }else {
+            return false
+        }
+        
+    }
+    
+    
     /*
     func isAvailableSession()->Bool{
         
