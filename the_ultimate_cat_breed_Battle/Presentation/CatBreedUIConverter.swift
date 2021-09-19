@@ -7,11 +7,15 @@
 
 import Foundation
 
+
+
 struct UICatBreed:Codable {
     let name:String
     let image:String
     let description:String
     var isLiked: Bool?
+    var voteDate: String?
+    
 }
 
 class CatBreedUIConverter {
@@ -31,6 +35,13 @@ class CatBreedUIConverter {
         let description = catBreed.description ?? ""
         
         return UICatBreed(name: name, image: imageUrl, description: description)
+        
+    }
+    
+    func dateUIConverter(_ date: Date) -> String{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, h:mm a"
+        return formatter.string(from: date)
         
     }
 }

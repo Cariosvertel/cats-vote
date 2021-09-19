@@ -44,9 +44,12 @@ class VoteCatBreedViewController: UIViewController {
     @IBAction func didTapLikeCatBreed(_ sender: UIButton) {
         //TODO: Add like to breed here. Same in local persistency
         var vote = catBreeds[presenter.catBreedProgressStatus.currentIndex]
+        let currentDateTime = Date()
+        
         switch sender.tag {
         case UserVote.like.rawValue:
             vote.isLiked = true
+            
                    
         case UserVote.dislike.rawValue:
             vote.isLiked = false
@@ -54,18 +57,15 @@ class VoteCatBreedViewController: UIViewController {
         default:
             break
         }
-        /*
-        let vote = catBreeds[currentBreedIndex]
-        vote.isLike = userDidPressLike
-        presenter.saveVote(vote)
-        */
+        print("esto es lo que se guarda de fecha \(currentDateTime)")
+        vote.voteDate = presenter.convertUIdate(currentDateTime)
         presenter.saveVote(vote)
         showTheNextBreed()
     }
+    
     @IBAction func didTapDislikeCatBreed(_ sender: UIButton) {
-        
-        
     }
+    
     @IBAction func didTapBreedsList(_ sender: UIButton) {
         guard let toBreedListVC = (storyboard?.instantiateViewController(identifier: "BreedListVC")) as? BreedListViewController else {return}
         toBreedListVC.catBreeds = presenter.catBreedProgressStatus.breeds // debo usar el presenter?
@@ -76,8 +76,6 @@ class VoteCatBreedViewController: UIViewController {
         toVotingRecord.catBreeds = presenter.catBreedProgressStatus.breeds
         navigationController?.present(toVotingRecord, animated: true, completion: nil)
     }
-    
-    
 }
 
 extension VoteCatBreedViewController{
@@ -91,8 +89,6 @@ extension VoteCatBreedViewController{
     func showErrorMessage(){
         let alert = UIAlertController(title: "An error has occurred!", message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
-        
-        
         self.present(alert, animated: true)
     }
 
@@ -100,9 +96,6 @@ extension VoteCatBreedViewController{
         let currentCatBreedIndex = presenter.catBreedProgressStatus.currentIndex
         catBreedName.text = catBreed[currentCatBreedIndex].name
         catBreedImage.kf.setImage(with: URL(string: catBreeds[presenter.catBreedProgressStatus.currentIndex].image))
-    }
-    func setCatBreedImage(_ imageUrl: String){
-        
     }
 }
 

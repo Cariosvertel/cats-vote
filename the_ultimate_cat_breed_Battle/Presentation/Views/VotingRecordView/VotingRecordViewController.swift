@@ -8,15 +8,16 @@
 import UIKit
 
 class VotingRecordViewController: UIViewController {
-    
+   
     var catBreeds:[UICatBreed] = []
+    var presenter = CatBreedPresenter.instance
     
     @IBOutlet weak var votingRecordTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         votingRecordTableView.dataSource = self
         votingRecordTableView.register(VotingRecordTableViewCell.nib, forCellReuseIdentifier: VotingRecordTableViewCell.identifier)
-
+        catBreeds = presenter.getVotedCatBreeds()
         // Do any additional setup after loading the view.
     }
    
@@ -34,7 +35,9 @@ extension VotingRecordViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: VotingRecordTableViewCell.identifier, for: indexPath) as! VotingRecordTableViewCell
+        
         cell.setUIVotingRecord(catBreeds[indexPath.row])
+        
         return cell
     }
     

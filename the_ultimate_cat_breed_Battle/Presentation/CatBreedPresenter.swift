@@ -63,9 +63,10 @@ class CatBreedPresenter {
     }
     
     func saveVote(_ vote: UICatBreed){
-        print("current Index before crash \(catBreedProgressStatus.currentIndex)")
-        print("count of breeds before crash : \(catBreedProgressStatus.breeds.count)")
+        
         catBreedProgressStatus.breeds[catBreedProgressStatus.currentIndex] = vote
+        
+     
         catBreedDataService.saveBreedsVoting(catBreedProgressStatus)
     }
     
@@ -90,6 +91,18 @@ class CatBreedPresenter {
     func loadTheNextCatToVoteFor(_ lastSession: CatBreedProgressStatus){
         catBreedProgressStatus = lastSession
         catBreedProgressStatus.currentIndex += 1
+    }
+    
+    func getVotedCatBreeds() -> [UICatBreed]{
+        
+        return catBreedProgressStatus.breeds.filter{ catBreed in
+            
+            return catBreed.isLiked != nil
+        }
+    }
+    
+    func convertUIdate(_ date: Date) -> String{
+        return converter.dateUIConverter(date)
     }
     
 }

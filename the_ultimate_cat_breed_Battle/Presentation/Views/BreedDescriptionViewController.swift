@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BreedDescriptionViewController: UIViewController {
     
@@ -26,6 +27,11 @@ class BreedDescriptionViewController: UIViewController {
     func setUIBreedDescription(){
         breedName.text = catBreed?.name
         breedDescription.text = catBreed?.description
+        guard let urlImage = catBreed?.image else {return}
+        breedImage.kf.setImage(with: URL(string: urlImage))
+        
     }
+    
+    
 
 }

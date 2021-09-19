@@ -21,7 +21,8 @@ class VotingRecordTableViewCell: UITableViewCell {
     //date format:MMM d, h:mm a
     func setUIVotingRecord(_ catBreed: UICatBreed){
         breedName.text = catBreed.name
-        
+        print("la fecha que sale es \(catBreed.voteDate)")
+        voteDate.text = catBreed.voteDate
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,5 +30,10 @@ class VotingRecordTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+}
+
+extension VotingRecordTableViewCell {
+    
     
 }
