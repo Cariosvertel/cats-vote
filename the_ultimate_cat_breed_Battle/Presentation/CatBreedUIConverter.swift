@@ -11,6 +11,7 @@ struct UICatBreed:Codable {
     let name:String
     let image:String
     let description:String
+    var isLiked: Bool?
 }
 
 class CatBreedUIConverter {

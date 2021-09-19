@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Kingfisher
 //TODO: rename to BreedVoterViewController
 
 
@@ -29,8 +28,8 @@ class VoteCatBreedViewController: UIViewController {
             //TODO: Stop spinning indicator
             self.catBreeds = uiCatBreed
             self.setUIVoteCatBreed(self.catBreeds)
-            
             self.loading.stopAnimating()
+            
         }, onError: {error in
             //TODO: show any error with UIAlertViewController
             self.showErrorMessage()
@@ -43,23 +42,14 @@ class VoteCatBreedViewController: UIViewController {
     
     @IBAction func didTapLikeCatBreed(_ sender: UIButton) {
         //TODO: Add like to breed here. Same in local persistency
-        var vote = catBreeds[presenter.catBreedProgressStatus.currentIndex]
-        switch sender.tag {
-        case UserVote.like.rawValue:
-            vote.isLiked = true
-                   
-        case UserVote.dislike.rawValue:
-            vote.isLiked = false
-                   
-        default:
-            break
-        }
+//        let userDidPressLike = sender.tag == 1
+        
         /*
         let vote = catBreeds[currentBreedIndex]
         vote.isLike = userDidPressLike
         presenter.saveVote(vote)
         */
-        presenter.saveVote(vote)
+
         showTheNextBreed()
     }
     @IBAction func didTapDislikeCatBreed(_ sender: UIButton) {
@@ -68,12 +58,12 @@ class VoteCatBreedViewController: UIViewController {
     }
     @IBAction func didTapBreedsList(_ sender: UIButton) {
         guard let toBreedListVC = (storyboard?.instantiateViewController(identifier: "BreedListVC")) as? BreedListViewController else {return}
-        toBreedListVC.catBreeds = presenter.catBreedProgressStatus.breeds // debo usar el presenter?
+        toBreedListVC.catBreeds = catBreeds
         navigationController?.pushViewController(toBreedListVC, animated: true)
     }
     @IBAction func didTapVotingRecord(_ sender: UIButton) {
         guard let toVotingRecord = (storyboard?.instantiateViewController(identifier: "VotingRecordVC")) as? VotingRecordViewController else {return}
-        toVotingRecord.catBreeds = presenter.catBreedProgressStatus.breeds
+        toVotingRecord.catBreeds = catBreeds
         navigationController?.present(toVotingRecord, animated: true, completion: nil)
     }
     
@@ -83,11 +73,19 @@ class VoteCatBreedViewController: UIViewController {
 extension VoteCatBreedViewController{
     
     func showTheNextBreed(){
+//        let isNotTheLastBreed = currentBreedIndex < catBreeds.count - 1
+
+//        if isNotTheLastBreed{
         if presenter.isNotTheLastBreed(){
+            presenter.catBreedProgressStatus.currentIndex += 1
+            let currentCatBreedIndex = presenter.catBreedProgressStatus.currentIndex
+            let currentCatBreed = presenter.catBreedProgressStatus.breeds[currentCatBreedIndex]
+            
+//            catBreedName.text = catBreeds[currentBreedIndex].name
             setUIVoteCatBreed(catBreeds)
         }
+        
     }
-    
     func showErrorMessage(){
         let alert = UIAlertController(title: "An error has occurred!", message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
@@ -99,14 +97,5 @@ extension VoteCatBreedViewController{
     func setUIVoteCatBreed(_ catBreed: [UICatBreed]){
         let currentCatBreedIndex = presenter.catBreedProgressStatus.currentIndex
         catBreedName.text = catBreed[currentCatBreedIndex].name
-        catBreedImage.kf.setImage(with: URL(string: catBreeds[presenter.catBreedProgressStatus.currentIndex].image))
     }
-    func setCatBreedImage(_ imageUrl: String){
-        
-    }
-}
-
-enum UserVote: Int {
-    case like
-    case dislike
 }

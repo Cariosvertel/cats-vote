@@ -20,10 +20,18 @@ class CatBreedPresenter {
     static let instance: CatBreedPresenter = CatBreedPresenter()
     let catBreedDataService = CatBreedDataService.instance
     let converter:CatBreedUIConverter = CatBreedUIConverter.instance
-//    let currentIndex = 0
     var catBreedProgressStatus = CatBreedProgressStatus()
     
     func getCatBreeds(onCompletion: @escaping CallbackBlock<UICatBreed>, onError: ErrorBlock?){
+        if isAvaliableSession(){
+            
+            if let localCatBreedProgressStatus = getlocalCatBreedProgressStatus() {
+                loadTheNextCatToVoteFor(localCatBreedProgressStatus)
+                onCompletion(catBreedProgressStatus.breeds)
+                return
+            }
+            print("can't load session")
+        }
         /*
         if isAvailableSession(){
             let localBreeds = getLocalBreeds()
@@ -54,6 +62,19 @@ class CatBreedPresenter {
         
     }
     
+    func saveVote(_ vote: UICatBreed){
+        print("current Index before crash \(catBreedProgressStatus.currentIndex)")
+        print("count of breeds before crash : \(catBreedProgressStatus.breeds.count)")
+        catBreedProgressStatus.breeds[catBreedProgressStatus.currentIndex] = vote
+        catBreedDataService.saveBreedsVoting(catBreedProgressStatus)
+    }
+    
+    func isAvaliableSession()->Bool {
+        return catBreedDataService.defaults.object(forKey: "savedSession") != nil
+    }
+    
+    
+    
     
     /*
     func isAvailableSession()->Bool{
@@ -62,8 +83,13 @@ class CatBreedPresenter {
     }
     */
 
-    
-    
-    
+    func getlocalCatBreedProgressStatus() -> CatBreedProgressStatus?{
+        
+        return catBreedDataService.getSavedSession()
+    }
+    func loadTheNextCatToVoteFor(_ lastSession: CatBreedProgressStatus){
+        catBreedProgressStatus = lastSession
+        catBreedProgressStatus.currentIndex += 1
+    }
     
 }

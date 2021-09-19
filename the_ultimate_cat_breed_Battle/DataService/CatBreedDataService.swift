@@ -10,6 +10,7 @@ import Foundation
 class CatBreedDataService {
     static let instance:CatBreedDataService = CatBreedDataService()
     let apiKey = "7c5d7bd1-5615-43b8-bcd6-2694fe1280b0"
+    let defaults = UserDefaults.standard
     
     func getBreeds(onCompletion: @escaping CallbackBlock<CatBreed>, onError: ErrorBlock?){
         
@@ -38,7 +39,24 @@ class CatBreedDataService {
     }
     
     //TODO: Create method for saving breeds locally
+    func saveBreedsVoting(_ catBreeds: CatBreedProgressStatus){
+       
+        if let encoded = try?JSONEncoder().encode(catBreeds){
+            
+            defaults.set(encoded, forKey: "savedSession")
+        }
+    }
     
-    
+    func getSavedSession() -> CatBreedProgressStatus? {
+        if let savedSession = defaults.object(forKey: "savedSession") as? Data{
+            if let loadedSession = try?JSONDecoder().decode(CatBreedProgressStatus.self, from: savedSession){
+                print("aqui esta la jugada\(loadedSession.currentIndex)")
+                return loadedSession
+            }
+            
+        }
+        return nil
     //TODO: Create method for getting breeds locally
+    }
+
 }
