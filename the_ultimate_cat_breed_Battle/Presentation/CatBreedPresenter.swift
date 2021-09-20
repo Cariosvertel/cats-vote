@@ -48,7 +48,7 @@ class CatBreedPresenter {
         }, onError: onError)
     }
     
-    func isNotTheLastBreed() -> Bool{
+    func jumpToNextBreedIfPossible() -> Bool{
         let currentIndex = catBreedProgressStatus.currentIndex
         let catBreedCount = catBreedProgressStatus.breeds.count
         let isNotTheLastBreed = currentIndex < catBreedCount - 1

@@ -22,12 +22,14 @@ class VoteCatBreedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //TODO: show spinning indicator and put breedProgress in closure below
         loading.startAnimating()
         presenter.getCatBreeds(onCompletion: { uiCatBreed in
             // response
             //TODO: Stop spinning indicator
             self.catBreeds = uiCatBreed
+            
             self.setUIVoteCatBreed(self.catBreeds)
             
             self.loading.stopAnimating()
@@ -46,18 +48,15 @@ class VoteCatBreedViewController: UIViewController {
         var vote = catBreeds[presenter.catBreedProgressStatus.currentIndex]
         let currentDateTime = Date()
         
-        switch sender.tag {
-        case UserVote.like.rawValue:
+        switch UserVote(rawValue:sender.tag)! {
+        case UserVote.like:
             vote.isLiked = true
-            
-                   
-        case UserVote.dislike.rawValue:
+
+        case UserVote.dislike:
             vote.isLiked = false
                    
-        default:
-            break
         }
-        print("esto es lo que se guarda de fecha \(currentDateTime)")
+       
         vote.voteDate = presenter.convertUIdate(currentDateTime)
         presenter.saveVote(vote)
         showTheNextBreed()
@@ -81,7 +80,7 @@ class VoteCatBreedViewController: UIViewController {
 extension VoteCatBreedViewController{
     
     func showTheNextBreed(){
-        if presenter.isNotTheLastBreed(){
+        if presenter.jumpToNextBreedIfPossible(){
             setUIVoteCatBreed(catBreeds)
         }
     }
@@ -95,7 +94,30 @@ extension VoteCatBreedViewController{
     func setUIVoteCatBreed(_ catBreed: [UICatBreed]){
         let currentCatBreedIndex = presenter.catBreedProgressStatus.currentIndex
         catBreedName.text = catBreed[currentCatBreedIndex].name
-        catBreedImage.kf.setImage(with: URL(string: catBreeds[presenter.catBreedProgressStatus.currentIndex].image))
+        setcatBreedImage(catBreed[currentCatBreedIndex])
+    }
+    
+    func setcatBreedImage(_ catBreed: UICatBreed){
+        let url = URL(string: catBreed.image)
+        let processor = DownsamplingImageProcessor(size: catBreedImage.bounds.size)
+            |> RoundCornerImageProcessor(cornerRadius: 15)
+        catBreedImage.kf.indicatorType = .activity
+        catBreedImage.kf.setImage(with: url,
+                                  placeholder: UIImage(named: "placeholderImage"),
+                                  options: [
+                                    .processor(processor),
+                                    .scaleFactor(UIScreen.main.scale),
+                                    .cacheOriginalImage
+                                  ]){
+            result in
+            switch result {
+            case .success(let value):
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                print("Job failed: \(error.localizedDescription)")
+            }
+        }
+        
     }
 }
 

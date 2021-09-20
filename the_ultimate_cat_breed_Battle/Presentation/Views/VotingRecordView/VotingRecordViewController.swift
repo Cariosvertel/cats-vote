@@ -15,6 +15,8 @@ class VotingRecordViewController: UIViewController {
     @IBOutlet weak var votingRecordTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        votingRecordTableView.delegate = self
         votingRecordTableView.dataSource = self
         votingRecordTableView.register(VotingRecordTableViewCell.nib, forCellReuseIdentifier: VotingRecordTableViewCell.identifier)
         catBreeds = presenter.getVotedCatBreeds()
@@ -42,4 +44,11 @@ extension VotingRecordViewController: UITableViewDataSource {
     }
     
     
+}
+
+extension VotingRecordViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+        
+    }
 }

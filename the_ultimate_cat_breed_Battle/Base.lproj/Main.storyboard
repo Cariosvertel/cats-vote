@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3lW-XR-4Bx">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,40 +13,52 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="VoteCatBreedViewController" customModule="the_ultimate_cat_breed_Battle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h2c-kM-oB5">
-                                <rect key="frame" x="0.0" y="88" width="414" height="360"/>
+                                <rect key="frame" x="20" y="88" width="388" height="375"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6la-gv-IK0">
-                                <rect key="frame" x="0.0" y="448" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="463" width="428" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="AAV-H2-AKZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="127" translatesAutoresizingMaskIntoConstraints="NO" id="dUS-Es-JPU">
-                                <rect key="frame" x="0.0" y="555.66666666666663" width="413" height="60"/>
+                                <rect key="frame" x="30" y="577" width="368" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVo-3e-ynX">
-                                        <rect key="frame" x="0.0" y="0.0" width="143" height="60"/>
-                                        <color key="backgroundColor" red="0.030604847538255608" green="0.44696445657749362" blue="0.03298676372567446" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120.66666666666667" height="60"/>
+                                        <color key="backgroundColor" red="0.023529411764705882" green="0.49019607843137253" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                         <state key="normal" title="Me gusta">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapLikeCatBreed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AJW-zy-ir8"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51A-iL-Ymg">
-                                        <rect key="frame" x="270" y="0.0" width="143" height="60"/>
-                                        <color key="backgroundColor" red="0.96324712040000005" green="0.29014298319999998" blue="0.16126701239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="247.66666666666671" y="0.0" width="120.33333333333334" height="60"/>
+                                        <color key="backgroundColor" red="0.9694926143" green="0.32892549040000002" blue="0.18200322990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                         <state key="normal" title="No me gusta">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapLikeCatBreed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVK-UQ-bmz"/>
                                         </connections>
@@ -57,29 +69,41 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ST-BM-45Q">
-                                <rect key="frame" x="294" y="812" width="105" height="35"/>
+                                <rect key="frame" x="278" y="842" width="120" height="35"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="105" id="3zw-Ju-Drt"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="3zw-Ju-Drt"/>
                                     <constraint firstAttribute="height" constant="35" id="SNS-Vi-0TQ"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                 <state key="normal" title="breedsList">
                                     <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapBreedsList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="itg-XK-noP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="759-ct-Fa3">
-                                <rect key="frame" x="15" y="812" width="110" height="35"/>
+                                <rect key="frame" x="30" y="842" width="120" height="35"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="Qei-3y-BsG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Qei-3y-BsG"/>
                                     <constraint firstAttribute="height" constant="35" id="lZo-dx-N5h"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                 <state key="normal" title="Voting Record">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapVotingRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1jy-rc-bs7"/>
                                 </connections>
@@ -93,20 +117,26 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6la-gv-IK0" firstAttribute="top" secondItem="h2c-kM-oB5" secondAttribute="bottom" id="1DO-Q1-hXL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4ST-BM-45Q" secondAttribute="trailing" constant="15" id="3Bk-om-PwN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4ST-BM-45Q" secondAttribute="trailing" constant="30" id="3Bk-om-PwN">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
                             <constraint firstAttribute="bottom" secondItem="h2c-kM-oB5" secondAttribute="bottom" multiplier="2:1" id="9z1-hP-KC2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h2c-kM-oB5" secondAttribute="trailing" id="DjU-RW-qsC"/>
-                            <constraint firstItem="759-ct-Fa3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="I4R-U5-S3C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h2c-kM-oB5" secondAttribute="trailing" constant="20" id="DjU-RW-qsC"/>
+                            <constraint firstItem="759-ct-Fa3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="I4R-U5-S3C"/>
                             <constraint firstItem="h2c-kM-oB5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OJg-IU-Dga"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4ST-BM-45Q" secondAttribute="bottom" constant="15" id="Ok7-rN-nhk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6la-gv-IK0" secondAttribute="trailing" id="QH7-Bn-xQX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dUS-Es-JPU" secondAttribute="bottom" multiplier="7:5" id="UjU-Jn-TQS"/>
-                            <constraint firstItem="h2c-kM-oB5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YK6-qy-wu6"/>
+                            <constraint firstItem="h2c-kM-oB5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YK6-qy-wu6"/>
                             <constraint firstItem="4ST-BM-45Q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="759-ct-Fa3" secondAttribute="trailing" constant="8" symbolic="YES" id="d92-tR-lKh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="759-ct-Fa3" secondAttribute="bottom" constant="15" id="eNb-64-4p7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dUS-Es-JPU" secondAttribute="trailing" constant="1" id="eqM-vx-HfV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dUS-Es-JPU" secondAttribute="trailing" constant="30" id="eqM-vx-HfV"/>
                             <constraint firstItem="6la-gv-IK0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nPH-OD-vh5"/>
-                            <constraint firstItem="dUS-Es-JPU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t3f-p0-QfN"/>
+                            <constraint firstItem="dUS-Es-JPU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="t3f-p0-QfN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IGT-9n-6e4"/>
@@ -125,35 +155,56 @@
             <objects>
                 <viewController storyboardIdentifier="BreedListVC" id="4mh-J4-FAF" customClass="BreedListViewController" customModule="the_ultimate_cat_breed_Battle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c95-Dp-Qcw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4dl-TX-zIw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="748"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4dl-TX-zIw">
+                                <rect key="frame" x="0.0" y="104" width="428" height="718"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rv-XX-qEG">
-                                <rect key="frame" x="20" y="800" width="374" height="57"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Go back to Vote">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rv-XX-qEG">
+                                <rect key="frame" x="20" y="830" width="388" height="57"/>
+                                <color key="backgroundColor" red="0.59884047510000005" green="0.59892958399999996" blue="0.61757189040000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
+                                <state key="normal" title="← Go Back">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapGoBackToVote:" destination="4mh-J4-FAF" eventType="touchUpInside" id="DdY-es-XOj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breeds List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHz-a2-aOF">
+                                <rect key="frame" x="20" y="49" width="388" height="50"/>
+                                <color key="backgroundColor" red="0.59884047510000005" green="0.59892958399999996" blue="0.61757189040000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QBU-9Z-zgT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="KHz-a2-aOF" firstAttribute="top" secondItem="QBU-9Z-zgT" secondAttribute="top" constant="5" id="ADx-Ed-8h5"/>
                             <constraint firstItem="QBU-9Z-zgT" firstAttribute="trailing" secondItem="7Rv-XX-qEG" secondAttribute="trailing" constant="20" id="TwC-tA-ukC"/>
-                            <constraint firstItem="4dl-TX-zIw" firstAttribute="top" secondItem="QBU-9Z-zgT" secondAttribute="top" id="VAa-yC-MZJ"/>
+                            <constraint firstItem="4dl-TX-zIw" firstAttribute="top" secondItem="QBU-9Z-zgT" secondAttribute="top" constant="60" id="VAa-yC-MZJ"/>
                             <constraint firstItem="7Rv-XX-qEG" firstAttribute="top" secondItem="4dl-TX-zIw" secondAttribute="bottom" constant="8" symbolic="YES" id="ZFZ-qf-9sU"/>
                             <constraint firstItem="7Rv-XX-qEG" firstAttribute="leading" secondItem="QBU-9Z-zgT" secondAttribute="leading" constant="20" id="cug-fO-7eF"/>
                             <constraint firstItem="QBU-9Z-zgT" firstAttribute="trailing" secondItem="4dl-TX-zIw" secondAttribute="trailing" id="dEm-f5-kSK"/>
                             <constraint firstItem="4dl-TX-zIw" firstAttribute="leading" secondItem="QBU-9Z-zgT" secondAttribute="leading" id="hOk-1V-waf"/>
+                            <constraint firstItem="KHz-a2-aOF" firstAttribute="leading" secondItem="QBU-9Z-zgT" secondAttribute="leading" constant="20" id="lxi-Bu-fvE"/>
+                            <constraint firstItem="4dl-TX-zIw" firstAttribute="top" secondItem="KHz-a2-aOF" secondAttribute="bottom" constant="5" id="n89-zc-Prb"/>
                             <constraint firstItem="7Rv-XX-qEG" firstAttribute="bottom" secondItem="QBU-9Z-zgT" secondAttribute="bottom" constant="-5" id="t2d-g0-KUI"/>
                             <constraint firstItem="QBU-9Z-zgT" firstAttribute="bottom" secondItem="4dl-TX-zIw" secondAttribute="bottom" constant="70" id="tn8-6j-O1f"/>
+                            <constraint firstItem="QBU-9Z-zgT" firstAttribute="trailing" secondItem="KHz-a2-aOF" secondAttribute="trailing" constant="20" id="uqV-aJ-ONY"/>
                         </constraints>
                     </view>
                     <connections>
@@ -169,31 +220,43 @@
             <objects>
                 <viewController storyboardIdentifier="VotingRecordVC" id="LoS-22-inl" customClass="VotingRecordViewController" customModule="the_ultimate_cat_breed_Battle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="42e-mu-hv8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tml-RL-Urw">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <rect key="frame" x="20" y="44" width="388" height="848"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VotingRecord" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwK-nh-ijI">
-                                        <rect key="frame" x="10" y="5" width="354" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VotingRecord" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwK-nh-ijI">
+                                        <rect key="frame" x="10" y="5" width="368" height="37.666666666666664"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dXD-cU-OWs">
-                                        <rect key="frame" x="10" y="55" width="354" height="703"/>
+                                        <rect key="frame" x="10" y="50.666666666666686" width="368" height="737.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6X-mV-lH7">
-                                        <rect key="frame" x="10" y="768" width="354" height="40"/>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="10" y="798" width="368" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="YDb-T7-11N"/>
                                         </constraints>
-                                        <state key="normal" title="Go Back">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
+                                        <state key="normal" title="← Go Back">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapGoBack:" destination="LoS-22-inl" eventType="touchUpInside" id="uJt-kr-XiA"/>
                                         </connections>
@@ -237,7 +300,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3lW-XR-4Bx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0eq-Wy-e8W">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -254,47 +317,53 @@
             <objects>
                 <viewController storyboardIdentifier="BreedDescriptionVC" id="cnH-cx-KqP" customClass="BreedDescriptionViewController" customModule="the_ultimate_cat_breed_Battle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j0P-h0-mrZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAh-Qj-pVd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twr-qL-j7d">
-                                        <rect key="frame" x="10" y="5" width="394" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <rect key="frame" x="10" y="5" width="408" height="40"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPe-8n-aH2">
-                                        <rect key="frame" x="10" y="768" width="394" height="40"/>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPe-8n-aH2">
+                                        <rect key="frame" x="10" y="798" width="408" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="FMO-8I-Cvo"/>
                                         </constraints>
-                                        <state key="normal" title="Go Back">
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
+                                        <state key="normal" title="← Go Back">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapGoBack:" destination="cnH-cx-KqP" eventType="touchUpInside" id="c4x-ES-NUY"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vCz-88-pG5">
-                                        <rect key="frame" x="5" y="52" width="404" height="329.66666666666669"/>
+                                        <rect key="frame" x="5" y="50" width="418" height="346.66666666666669"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4O-Hx-cqZ">
-                                        <rect key="frame" x="5" y="386.66666666666669" width="404" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4O-Hx-cqZ">
+                                        <rect key="frame" x="5" y="401.66666666666669" width="418" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="4jL-7E-vP2"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvx-N4-6qK">
-                                        <rect key="frame" x="5" y="411.66666666666669" width="404" height="182.66666666666669"/>
+                                        <rect key="frame" x="5" y="426.66666666666669" width="418" height="178.33333333333331"/>
                                         <string key="text">The Chantilly is a devoted companion and prefers company to being left alone. While the Chantilly is not demanding, she will \"chirp\" and \"talk\" as if having a conversation. This breed is affectionate, with a sweet temperament. It can stay still for extended periods, happily lounging in the lap of its loved one. This quality makes the Tiffany an ideal traveling companion, and an ideal house companion for senior citizens and the physically handicapped</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -343,6 +412,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

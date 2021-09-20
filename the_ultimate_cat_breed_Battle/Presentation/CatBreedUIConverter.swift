@@ -40,7 +40,7 @@ class CatBreedUIConverter {
     
     func dateUIConverter(_ date: Date) -> String{
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMM d, h:mm a"
+        formatter.dateFormat = "MMM d"
         return formatter.string(from: date)
         
     }
